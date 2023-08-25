@@ -5,9 +5,9 @@ ARG CARD
 ENV ENV_NAME=$NAME
 ENV ENV_CARD=$CARD
 
-CMD echo '$ENV_NAME' '$ENV_CARD' '$NAME' '$CARD'
-COPY ./src/html/'$ENV_NAME'.html /usr/share/nginx/html/index.html
-COPY ./src/stylesheets/'$ENV_CARD'.css /usr/share/nginx/html/stylesheet.css
+CMD echo $ENV_NAME $ENV_CARD $NAME $CARD
+COPY ./src/html/$NAME.html /usr/share/nginx/html/index.html
+COPY ./src/stylesheets/$CARD.css /usr/share/nginx/html/stylesheet.css
 
 
 
