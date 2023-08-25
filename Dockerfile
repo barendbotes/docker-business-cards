@@ -1,9 +1,9 @@
 FROM nginx:1.25.2-alpine
 ARG NAME
-ARG card
+ARG CARD
 
 ENV ENV_NAME=$NAME
-ENV ENV_CARD=$card
+ENV ENV_CARD=$CARD
 
 CMD echo '$ENV_NAME' '$ENV_CARD' '$NAME' '$CARD'
 COPY ./src/html/'$ENV_NAME'.html /usr/share/nginx/html/index.html
