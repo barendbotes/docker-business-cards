@@ -9,4 +9,3 @@ services:
       - 8181:80
     environment:
       - NAME="Barend Botes"
-      - CARD=african
