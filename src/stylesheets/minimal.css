@@ -1,6 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300';
 
-$padding:30px;
 
 * { box-sizing: border-box; }
 
@@ -68,7 +67,7 @@ body { background: #757575; overflow-x: hidden; }
 /* Back styling */
 .back {
   background: #15CCC0;
-  padding: $padding;
+  padding: padding: 30px;;
 }
 .name {
   color: #3B3B3B;
@@ -79,8 +78,8 @@ p {
 }
 .info {
   position: absolute;
-  bottom: $padding;
-  left: $padding;
+  bottom: padding: 30px;;
+  left: padding: 30px;;
   color: #3b3b3b;
 }
 .property {
