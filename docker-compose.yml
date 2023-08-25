@@ -3,7 +3,7 @@ services:
   card:
     build: .
       args:
-        CARD: "african"
+        - card=african
     ports:
       - 8181:80
     environment:
