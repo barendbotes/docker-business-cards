@@ -67,7 +67,7 @@ body { background: #757575; overflow-x: hidden; }
 /* Back styling */
 .back {
   background: #15CCC0;
-  padding: padding: 30px;;
+  padding: 30px;
 }
 .name {
   color: #3B3B3B;
@@ -78,8 +78,8 @@ p {
 }
 .info {
   position: absolute;
-  bottom: padding: 30px;;
-  left: padding: 30px;;
+  bottom: 30px;
+  left: 30px;
   color: #3b3b3b;
 }
 .property {
