@@ -32,5 +32,5 @@ COPY ./entryPoint.sh entryPoint.sh
 # EXPOSE 80
 
 RUN chmod +x ./entryPoint.sh 
-CMD ["./entryPoint.sh"]
 CMD ["nginx", "-g", "daemon off;"]
+ENTRYPOINT ["./entryPoint.sh"]
