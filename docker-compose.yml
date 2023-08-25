@@ -6,6 +6,10 @@ services:
       args:
         - CARD=${CARD}
         - NAME=${NAME}
+        - COMPANY=${COMPANY}
+        - NUMBER=${NUMBER}
+        - EMAIL=${EMAIL}
+        - WEB=${WEB}
     ports:
       - 8181:80
     env_file:
