@@ -35,4 +35,4 @@ COPY ./entryPoint.sh /etc/nginx/entryPoint.sh
 
 # CMD ["nginx", "-g", "daemon off;"]
 RUN chmod +x /etc/nginx/entryPoint.sh
-ENTRYPOINT ["/etc/nginx/entryPoint.sh"]
+CMD  ["bin/sh", "/etc/nginx/entryPoint.sh"]
