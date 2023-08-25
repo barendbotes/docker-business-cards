@@ -18,7 +18,7 @@ FROM nginx:1.25.2-alpine
 # RUN rm /etc/nginx/conf.d/default.conf
 COPY ./src/html /usr/share/nginx/html
 COPY ./conf/default.conf /etc/nginx/templates/default.conf.template
-COPY ./entryPoint.sh /entryPoint.sh
+COPY ./entryPoint.sh /etc/nginx/entryPoint.sh
 
 # RUN sed -e "s/ \"NAME\": \"\$NAME\"/g" -i /usr/share/nginx/html/index.html
 
@@ -34,4 +34,5 @@ COPY ./entryPoint.sh /entryPoint.sh
 
 
 # CMD ["nginx", "-g", "daemon off;"]
-ENTRYPOINT ["/entryPoint.sh"]
+RUN chmod +x /etc/nginx/entryPoint.sh
+ENTRYPOINT ["/etc/nginx/entryPoint.sh"]
