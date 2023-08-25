@@ -5,10 +5,12 @@ ARG NAME
 ENV CARD=$CARD
 ENV NAME=$NAME
 
+
+
 COPY ./src/html/$CARD.html /usr/share/nginx/html/index.html
 COPY ./src/stylesheets/$CARD.css /usr/share/nginx/html/stylesheet.css
 
-
+sed -e "s/\"NAME\": \"\$NAME\"/g" -i /usr/share/nginx/html/index.html
 
 # Documentation
 # EXPOSE 80
