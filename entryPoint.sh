@@ -1,5 +1,4 @@
 #!/bin/sh
-
 sed -i "s|NAME|$NAME|g" /usr/share/nginx/html/$CARD.html
 sed -i "s|COMPANY|$COMPANY|g" /usr/share/nginx/html/$CARD.html
 sed -i "s|NUMBER|$NUMBER|g" /usr/share/nginx/html/$CARD.html
