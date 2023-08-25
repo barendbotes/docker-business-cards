@@ -50,6 +50,7 @@ body { background: #757575; overflow-x: hidden; }
   /* Center the name + outline (almost) */
   line-height: 390px; /* Height - some (because visual center is a little higher than actual center) */
   text-align: center;
+  display: table;
 }
 .logo {
   outline: 1px solid #19F6E8;
@@ -60,7 +61,7 @@ body { background: #757575; overflow-x: hidden; }
   font-family: 'Roboto', sans-serif;
   font-size: 1.4em;
   font-weight: normal;
-  line-height: 128px;
+  line-height: 32px;
   letter-spacing: 8px;
 }
 
