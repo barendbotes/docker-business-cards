@@ -15,9 +15,9 @@ FROM nginx:1.25.2-alpine
 # ENV WEB=$WEB
 # ENV ADDRESS=$ADDRESS
 
-RUN rm /etc/nginx/conf.d/default.conf
+# RUN rm /etc/nginx/conf.d/default.conf
 COPY ./src/html /usr/share/nginx/html
-COPY ./conf/default.conf /etc/nginx/conf.d/default.conf
+# COPY ./conf/default.conf /etc/nginx/conf.d/default.conf
 
 
 # RUN sed -e "s/ \"NAME\": \"\$NAME\"/g" -i /usr/share/nginx/html/index.html
