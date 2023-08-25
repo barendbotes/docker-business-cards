@@ -1,7 +1,8 @@
 version: "3.8"
 services:
   card:
-    build: .
+    build:
+      context: .
       args:
         - card=african
     ports:
