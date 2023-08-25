@@ -4,8 +4,10 @@ services:
     build:
       context: .
       args:
-        - CARD=african
+        - CARD=${CARD}
+        - NAME=${NAME}
     ports:
       - 8181:80
     environment:
       - NAME="Barend Botes"
+      - CARD=african
