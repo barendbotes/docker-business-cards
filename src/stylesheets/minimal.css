@@ -48,8 +48,8 @@ body { background: #757575; overflow-x: hidden; }
 /* Front styling */
 .front {
   /* Center the name + outline (almost) */
-  line-height: 50%; /* Height - some (because visual center is a little higher than actual center) */
-  display: table;
+  line-height: 600px; /* Height - some (because visual center is a little higher than actual center) */
+  text-align: center;
 }
 .logo {
   outline: 1px solid #19F6E8;
