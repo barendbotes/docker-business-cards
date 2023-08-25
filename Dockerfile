@@ -1,11 +1,12 @@
 FROM nginx:1.25.2-alpine
 ARG NAME
-ENV env_name $NAME
 ARG CARD
-ENV card $CARD
 
-COPY ./src/html/$card.html /usr/share/nginx/html/index.html
-COPY ./src/stylesheets/$card.css /usr/share/nginx/html/stylesheet.css
+ENV ENV_NAME =$NAME
+ENV ENV_CARD =$CARD
+
+COPY ./src/html/$ENV_CARD.html /usr/share/nginx/html/index.html
+COPY ./src/stylesheets/$ENV_CARD.css /usr/share/nginx/html/stylesheet.css
 
 
 
