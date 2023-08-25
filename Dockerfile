@@ -1,6 +1,12 @@
 FROM nginx:1.25.2-alpine
-COPY ./src/html /usr/share/nginx/html
-COPY ./src/stylesheets /usr/share/nginx/html
+ARG NAME
+ENV env_name $NAME
+ARG CARD
+
+COPY ./src/html/$CARD.html /usr/share/nginx/html/index.html
+COPY ./src/stylesheets/$CARD.css /usr/share/nginx/html/stylesheet.css
+
+
 
 # Documentation
 # EXPOSE 80
