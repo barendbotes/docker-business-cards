@@ -17,7 +17,7 @@ FROM nginx:1.25.2-alpine
 
 # RUN rm /etc/nginx/conf.d/default.conf
 COPY ./src/html /usr/share/nginx/html
-# COPY ./conf/default.conf /etc/nginx/conf.d/default.conf
+COPY ./conf/default.conf /etc/nginx/templates/default.conf.template
 
 
 # RUN sed -e "s/ \"NAME\": \"\$NAME\"/g" -i /usr/share/nginx/html/index.html
