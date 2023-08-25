@@ -10,6 +10,7 @@ services:
         - NUMBER=${NUMBER}
         - EMAIL=${EMAIL}
         - WEB=${WEB}
+        - ADDRESS=${ADDRESS}
     ports:
       - 8181:80
     env_file:

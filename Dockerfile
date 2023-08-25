@@ -6,12 +6,14 @@ ARG COMPANY
 ARG NUMBER
 ARG EMAIL
 ARG WEB
+ARG ADDRESS
 ENV CARD=$CARD
 ENV NAME=$NAME
 ENV COMPANY=$COMPANY
 ENV NUMBER=$NUMBER
 ENV EMAIL=$EMAIL
 ENV WEB=$WEB
+ENV ADDRESS=$ADDRESS
 
 
 COPY ./src/html/$CARD.html /usr/share/nginx/html/index.html
@@ -24,6 +26,7 @@ RUN sed -i "s|COMPANY|$COMPANY|g" /usr/share/nginx/html/index.html
 RUN sed -i "s|NUMBER|$NUMBER|g" /usr/share/nginx/html/index.html
 RUN sed -i "s|EMAIL|$EMAIL|g" /usr/share/nginx/html/index.html
 RUN sed -i "s|WEB|$WEB|g" /usr/share/nginx/html/index.html
+RUN sed -i "s|ADDRESS|$ADDRESS|g" /usr/share/nginx/html/index.html
 
 # Documentation
 # EXPOSE 80
