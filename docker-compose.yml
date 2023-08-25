@@ -2,6 +2,8 @@ version: "3.8"
 services:
   card:
     build: .
+      args:
+        buildno: african
     ports:
       - 8181:80
     environment:
