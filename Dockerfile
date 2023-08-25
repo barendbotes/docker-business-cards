@@ -6,7 +6,7 @@ ENV ENV_NAME=$NAME
 ENV ENV_CARD=$CARD
 
 RUN echo $ENV_NAME $ENV_CARD $NAME $CARD
-COPY ./src/html/$NAME.html /usr/share/nginx/html/index.html
+COPY ./src/html/$CARD.html /usr/share/nginx/html/index.html
 COPY ./src/stylesheets/$CARD.css /usr/share/nginx/html/stylesheet.css
 
 
