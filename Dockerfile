@@ -15,10 +15,8 @@ FROM nginx:1.25.2-alpine
 # ENV WEB=$WEB
 # ENV ADDRESS=$ADDRESS
 
-# RUN rm /etc/nginx/conf.d/default.conf
-COPY ./src/html /usr/share/nginx/html
+COPY ./src/html/* /usr/share/nginx/html/
 COPY ./conf/default.conf /etc/nginx/templates/default.conf.template
-COPY ./entryPoint.sh /etc/nginx/entryPoint.sh
 
 # RUN sed -e "s/ \"NAME\": \"\$NAME\"/g" -i /usr/share/nginx/html/index.html
 
@@ -33,6 +31,4 @@ COPY ./entryPoint.sh /etc/nginx/entryPoint.sh
 # EXPOSE 80
 
 
-# CMD ["nginx", "-g", "daemon off;"]
-RUN chmod +x /etc/nginx/entryPoint.sh
-CMD ["bin/sh", "/etc/nginx/entryPoint.sh"]
+CMD ["nginx", "-g", "daemon off;"]
