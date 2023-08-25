@@ -8,6 +8,5 @@ services:
         - NAME=${NAME}
     ports:
       - 8181:80
-    environment:
-      - NAME="Barend Botes"
-      - CARD=african
+    env_file:
+      - .env
