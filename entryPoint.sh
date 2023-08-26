@@ -9,4 +9,6 @@ sed -i "s|EMAIL|$EMAIL|g" /usr/share/nginx/html/$CARD.html
 sed -i "s|WEB|$WEB|g" /usr/share/nginx/html/$CARD.html
 sed -i "s|ADDRESS|$ADDRESS|g" /usr/share/nginx/html/$CARD.html
 
+cp /usr/share/nginx/html/$CARD.html /usr/share/nginx/html/index.html
+
 exec "$@"
